@@ -32,19 +32,19 @@ int  random(int Inv) {
 void Warehouse::input() {
 	bool f_fail;
 	
-		cout << "Введите данные" << endl;
-		cout << "Назва товару" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ" << endl;
+		cout << "РќР°Р·РІР° С‚РѕРІР°СЂСѓ" << endl;
 		cin >> name_p;
 
 	do{
-		cout << "Вага" << endl;
+		cout << "Р’Р°РіР°" << endl;
 		cin >> weight;
 		f_fail = cin.fail();
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	} while (f_fail == true);
 	do {
-		cout << "Ціна" << endl;
+		cout << "Р¦С–РЅР°" << endl;
 		cin >> price;
 		f_fail = cin.fail();
 		cin.clear();
@@ -52,7 +52,7 @@ void Warehouse::input() {
 	} while (f_fail == true);
 
 	do {
-		cout << "Кількість товару" << endl;
+		cout << "РљС–Р»СЊРєС–СЃС‚СЊ С‚РѕРІР°СЂСѓ" << endl;
 		cin >> numerosity;
 		f_fail = cin.fail();
 		cin.clear();
@@ -65,7 +65,7 @@ void Warehouse::input() {
 			cout << "..." << endl;
 			f.open("input.txt", ios_base::out);
 			cout << "open" << endl;
-			//f << "Інвентарний номер :" << random(Inventory_number) << "\t" << "Имя :" << name_p << "\t" << "Вага :" << weight << "\t" << "Цена :" << price << "\t" << "Количесво :" << numerosity << endl;
+			//f << "Р†РЅРІРµРЅС‚Р°СЂРЅРёР№ РЅРѕРјРµСЂ :" << random(Inventory_number) << "\t" << "РРјСЏ :" << name_p << "\t" << "Р’Р°РіР° :" << weight << "\t" << "Р¦РµРЅР° :" << price << "\t" << "РљРѕР»РёС‡РµСЃРІРѕ :" << numerosity << endl;
 			f << name_p << "\t" << random(Inventory_number) << "\t" << weight << "\t" << price << "\t" << numerosity << endl;
 
 			f.close();
@@ -82,7 +82,7 @@ void Warehouse::input() {
 void Warehouse::read() {
 	fstream file;
 	string str;
-	cout << "Введите название файла input.txt || output.txt" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р° input.txt || output.txt" << endl;
 	cin >> str;
 	file.open(str);
 	if (!file.is_open()) {
@@ -103,19 +103,19 @@ void Warehouse::add() {
 	
 	bool f_fail;
 
-	cout << "Введите данные" << endl;
-	cout << "Назва товару" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ" << endl;
+	cout << "РќР°Р·РІР° С‚РѕРІР°СЂСѓ" << endl;
 	cin >> name_p;
 
 	do {
-		cout << "Вага" << endl;
+		cout << "Р’Р°РіР°" << endl;
 		cin >> weight;
 		f_fail = cin.fail();
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	} while (f_fail == true);
 	do {
-		cout << "Ціна" << endl;
+		cout << "Р¦С–РЅР°" << endl;
 		cin >> price;
 		f_fail = cin.fail();
 		cin.clear();
@@ -123,7 +123,7 @@ void Warehouse::add() {
 	} while (f_fail == true);
 
 	do {
-		cout << "Кількість товару" << endl;
+		cout << "РљС–Р»СЊРєС–СЃС‚СЊ С‚РѕРІР°СЂСѓ" << endl;
 		cin >> numerosity;
 		f_fail = cin.fail();
 		cin.clear();
@@ -136,7 +136,7 @@ void Warehouse::add() {
 		cout << "..." << endl;
 		f.open("input.txt", ios_base::app);
 		cout << "open" << endl;
-		//f << "Інвентарний номер :" << random(Inventory_number) << "\t" << "Имя :" << name_p << "\t" << "Вага :" << weight << "\t" << "Цена :" << price << "\t" << "Количесво :" << numerosity << endl;
+		//f << "Р†РЅРІРµРЅС‚Р°СЂРЅРёР№ РЅРѕРјРµСЂ :" << random(Inventory_number) << "\t" << "РРјСЏ :" << name_p << "\t" << "Р’Р°РіР° :" << weight << "\t" << "Р¦РµРЅР° :" << price << "\t" << "РљРѕР»РёС‡РµСЃРІРѕ :" << numerosity << endl;
 		f << name_p << "\t" << random(Inventory_number) << "\t" << weight << "\t" << price << "\t" << numerosity << endl;
 
 		f.close();
@@ -174,7 +174,7 @@ void Warehouse::del() {
 		std::string::size_type n;
 		std::string  s;
 
-		cout << "Введие имя товара чтоб удалить" << endl;
+		cout << "Р’РІРµРґРёРµ РёРјСЏ С‚РѕРІР°СЂР° С‡С‚РѕР± СѓРґР°Р»РёС‚СЊ" << endl;
 		cin >> s;
 		while (!f.eof()) {
 			str = "";
@@ -207,7 +207,7 @@ void Warehouse::search()
 {
 	fstream file;
 	string str;
-	cout << "Введите название файла input.txt || output.txt" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р° input.txt || output.txt" << endl;
 	cin >> str;
 	file.open(str);
 	if (!file.is_open()) {
@@ -218,7 +218,7 @@ void Warehouse::search()
 		std::string::size_type n;
 		std::string  s;
 
-		cout << "Введие слово для поиска" << endl;
+		cout << "Р’РІРµРґРёРµ СЃР»РѕРІРѕ РґР»СЏ РїРѕРёСЃРєР°" << endl;
 		cin >> s;
 		while (!file.eof()) {
 			str = "";
@@ -230,7 +230,7 @@ void Warehouse::search()
 	file.close();
 }
 
-void Warehouse::update() // спросить почему удаляет одну запись при перезаписи файла 
+void Warehouse::update() // СЃРїСЂРѕСЃРёС‚СЊ РїРѕС‡РµРјСѓ СѓРґР°Р»СЏРµС‚ РѕРґРЅСѓ Р·Р°РїРёСЃСЊ РїСЂРё РїРµСЂРµР·Р°РїРёСЃРё С„Р°Р№Р»Р° 
 {
 
 	fstream f;
@@ -245,7 +245,7 @@ void Warehouse::update() // спросить почему удаляет одну запись при перезаписи ф
 		std::string::size_type n;
 		std::string  s;
 
-		cout << "Введие имя товара для обновление данных" << endl;
+		cout << "Р’РІРµРґРёРµ РёРјСЏ С‚РѕРІР°СЂР° РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёРµ РґР°РЅРЅС‹С…" << endl;
 		cin >> s;
 		while (!f.eof()) {
 			str = "";
@@ -257,16 +257,16 @@ void Warehouse::update() // спросить почему удаляет одну запись при перезаписи ф
 			}
 			else {
 				f >> name_p >> Inventory_number >> weight >> price >> numerosity;
-				cout << "Введите данные" << endl;
-				cout << "Назва товару" << endl;
+				cout << "Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ" << endl;
+				cout << "РќР°Р·РІР° С‚РѕРІР°СЂСѓ" << endl;
 				cin >> name_p;
-				cout << "Інвентарний номер" << endl;
+				cout << "Р†РЅРІРµРЅС‚Р°СЂРЅРёР№ РЅРѕРјРµСЂ" << endl;
 				cin >> Inventory_number;
-				cout << "Вага" << endl;
+				cout << "Р’Р°РіР°" << endl;
 				cin >> weight;
-				cout << "Ціна" << endl;
+				cout << "Р¦С–РЅР°" << endl;
 				cin >> price;
-				cout << "Кількість товару" << endl;
+				cout << "РљС–Р»СЊРєС–СЃС‚СЊ С‚РѕРІР°СЂСѓ" << endl;
 				cin >> numerosity;
 				f1 << name_p << "\t" << Inventory_number << "\t" << weight << "\t" << price << "\t" << numerosity;
 
