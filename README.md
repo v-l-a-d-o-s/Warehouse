@@ -16,11 +16,12 @@
 - CMake
 
 ## Інструкція по налаштуванню та запуску
-git clone https://github.com/user/warehouse
-cd warehouse
-cmake CMakeLists.txt
-make
-./main
+
+-git clone https://github.com/user/warehouse
+-cd warehouse
+-cmake CMakeLists.txt
+-make
+-./main
 1. Склонувати репозиторій 
 2. Встановити залежності через CMake
 3. Зібрати проект командою `make` 
